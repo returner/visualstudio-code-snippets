@@ -1,7 +1,5 @@
 ## aaa
 ```c#
-public async Task Test_Method()
-{
     // arrange
 
 
@@ -10,8 +8,6 @@ public async Task Test_Method()
 
     // assets
 
-    
-}
 ```
 
 ## fac
