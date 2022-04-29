@@ -1,2 +1,6 @@
 # visualstudio-code-snippets
-My code snippets for VisualStudio
+My custom code snippets for VisualStudio
+
+## Uses
+Tools > Code Snippets Manager (ctrl+K, ctrl + B)
+
