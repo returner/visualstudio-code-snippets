@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Code snippet for HttpGet</Title>
+      <Shortcut>pos</Shortcut>
+      <Description>Code snippet for Controller HttpGet</Description>
+      <Author>returner</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>response</ID>
+          <ToolTip>ResponseType</ToolTip>
+          <Default>IResponseBase</Default>
+        </Literal>
+        <Literal Editable="true">
+          <ID>name</ID>
+          <ToolTip>Method name</ToolTip>
+          <Default>MethodName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp"><![CDATA[
+      /// <summary>
+      ///
+      /// <summary>
+      /// <returns></returns>
+      [HttpPost()]
+      [SwaggerResponse(200, "success", typeof($response$))]
+public async Task<IActionResult> Get$name$Async($end$)
+{
+  try
+  {
+    await Task.CompletedTask;
+    return new $response$().Ok();
+  }
+  catch(Exception ex)
+  {
+    return ex.BadRequest(_logger);
+  }
+  }]]></Code>
+  
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
