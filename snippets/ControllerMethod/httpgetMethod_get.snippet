@@ -19,13 +19,28 @@
           <ToolTip>Method name</ToolTip>
           <Default>MethodName</Default>
         </Literal>
+        <Literal Editable="true">
+          <ID>request</ID>
+          <ToolTip>request name</ToolTip>
+          <Default>MethodName</Default>
+        </Literal>
+        <Literal Editable="true">
+          <ID>remark</ID>
+          <ToolTip>request name</ToolTip>
+          <Default>MethodName</Default>
+        </Literal>
+        <Literal Editable="true">
+          <ID>post_route</ID>
+          <ToolTip>request name</ToolTip>
+          <Default>MethodName</Default>
+        </Literal>
       </Declarations>
       <Code Language="csharp"><![CDATA[
       /// <summary>
-      ///
-      /// <summary>
+      /// $remark$
+      /// </summary>
       /// <returns></returns>
-      [HttpGet()]
+      [HttpGet("$post_route$")]
       [SwaggerResponse(200, "success", typeof($response$))]
 public async Task<IActionResult> Get$name$Async($end$)
 {
