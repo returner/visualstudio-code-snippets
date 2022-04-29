@@ -19,19 +19,34 @@
           <ToolTip>Method name</ToolTip>
           <Default>MethodName</Default>
         </Literal>
+        <Literal Editable="true">
+          <ID>request</ID>
+          <ToolTip>request name</ToolTip>
+          <Default>MethodName</Default>
+        </Literal>
+        <Literal Editable="true">
+          <ID>remark</ID>
+          <ToolTip>request name</ToolTip>
+          <Default>MethodName</Default>
+        </Literal>
+        <Literal Editable="true">
+          <ID>post_route</ID>
+          <ToolTip>request name</ToolTip>
+          <Default>MethodName</Default>
+        </Literal>
       </Declarations>
       <Code Language="csharp"><![CDATA[
       /// <summary>
-      ///
+      /// $remark$
       /// <summary>
       /// <returns></returns>
-      [HttpPost()]
+      [HttpPost("$post_route$")]
       [SwaggerResponse(200, "success", typeof($response$))]
-public async Task<IActionResult> $name$Async($end$)
+public async Task<IActionResult> $name$Async([FromBody]$request$ request)
 {
   try
   {
-    await Task.CompletedTask;
+    await Task.CompletedTask;$end$
     return new $response$().Ok();
   }
   catch(Exception ex)
