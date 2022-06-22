@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Code snippet for TryCatch in method</Title>
+      <Shortcut>ty</Shortcut>
+      <Description>Code snippet for Controller Method with try-catch</Description>
+      <Author>returner</Author>
+    </Header>
+    <Snippet>
+      <Code Language="csharp"><![CDATA[
+      try
+      {
+          var tokenInformation = Request.TokenInformation(_appSettings);
+          Guard.Against.Token(tokenInformation);
+
+          $end$
+      }
+      catch (TokenException)
+      {
+          return Unauthorized();
+      }
+      catch (Exception ex)
+      {
+          return ex.BadRequest(_logger);
+      }
+      ]]></Code>
+  
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
